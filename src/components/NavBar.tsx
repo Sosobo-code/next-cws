@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import {Home, Palette, ShoppingBag, Menu} from "lucide-react"
+import {Home, Menu, Palette, ShoppingBag} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -109,7 +109,7 @@ export default function NavBar() {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <Button asChild className="hidden md:block">
+          <Button asChild className="hidden md:flex items-center justify-center">
             <Link href="/">Contact Us</Link>
           </Button>
           <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -118,8 +118,8 @@ export default function NavBar() {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden flex flex-col items-center text-center">
-          <NavigationMenu>
+        <div className="md:hidden flex flex-col items-center text-center pull-down">
+          <NavigationMenu className="pb-2">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link href="/" passHref>
@@ -173,7 +173,7 @@ export default function NavBar() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <Button asChild variant="ghost">
+          <Button asChild variant="outline" className="w-1/2 mb-2">
             <Link href="/">Contact Us</Link>
           </Button>
         </div>
