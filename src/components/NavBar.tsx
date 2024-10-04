@@ -106,7 +106,7 @@ export default function NavBar() {
           </NavigationMenu>
         </div>
         <Button asChild>
-          <Link href="/contact">Contact us!</Link>
+          <Link href="/contact">Contact Us</Link>
         </Button>
       </div>
       <div className="fixed bottom-4 right-4">
