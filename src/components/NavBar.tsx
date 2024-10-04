@@ -30,7 +30,7 @@ export default function NavBar() {
   }
 
   return (
-    <header className="border-b">
+    <header className="sticky top-0 border-b bg-white z-50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
@@ -115,7 +115,6 @@ export default function NavBar() {
     </header>
   )
 }
-
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
