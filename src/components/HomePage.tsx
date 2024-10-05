@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button} from "@/components/ui/button";
-import Footer from "@/components/Footer";
 
 const HomePage = () => {
     return (
