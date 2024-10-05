@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button} from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 const HomePage = () => {
     return (
@@ -19,6 +20,7 @@ const HomePage = () => {
                 <Button className="w-full md:w-1/2 sm:w-1/8">Get Started</Button>
             </div>
         </div>
+
     );
 };
 
