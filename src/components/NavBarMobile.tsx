@@ -27,6 +27,7 @@ export default function NavBarMobile({isMobileMenuOpen}: MobileMenuProps) {
     return null;
   }
 
+  // TODO: make navbar close every time a link is clicked
   return (
     <div className="md:hidden flex flex-col items-center text-center pull-down z-40">
       <NavigationMenu className="pb-2">
@@ -50,7 +51,7 @@ export default function NavBarMobile({isMobileMenuOpen}: MobileMenuProps) {
                   <NavigationMenuLink asChild>
                     <Link
                       className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md ${theme === 'dark' ? 'animate-gradient' : 'light-mode-animate-gradient'}`}
-                      href="/"
+                      href="/store/wraps"
                     >
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Wrap Colours
@@ -61,7 +62,7 @@ export default function NavBarMobile({isMobileMenuOpen}: MobileMenuProps) {
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/" title="Shop">
+                <ListItem href="/store" title="Shop">
                   View the store.
                 </ListItem>
                 <ListItem href="/" title="Accessories">
@@ -74,7 +75,7 @@ export default function NavBarMobile({isMobileMenuOpen}: MobileMenuProps) {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/" passHref>
+            <Link href="#" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 <Palette className="mr-2 h-4 w-4"/>
                 Colour Picker

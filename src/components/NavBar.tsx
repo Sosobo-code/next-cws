@@ -32,7 +32,7 @@ export default function NavBar() {
   }
 
   return (
-    <header className="sticky top-0 border-b bg-background z-50">
+    <nav className="sticky top-0 border-b bg-background z-50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
@@ -56,7 +56,7 @@ export default function NavBar() {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link href="/" passHref>
+                  <Link href="/">
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       <Home className="mr-2 h-4 w-4"/>
                       Home
@@ -74,7 +74,7 @@ export default function NavBar() {
                         <NavigationMenuLink asChild>
                           <Link
                             className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md ${theme === 'dark' ? 'animate-gradient' : 'light-mode-animate-gradient'}`}
-                            href="/"
+                            href="/store/wraps"
                           >
                             <div className="mb-2 mt-4 text-lg font-medium">
                               Wrap Colours
@@ -85,15 +85,21 @@ export default function NavBar() {
                           </Link>
                         </NavigationMenuLink>
                       </li>
-                      <ListItem href="/" title="Shop">
-                        View the store.
-                      </ListItem>
-                      <ListItem href="/" title="Accessories">
-                        View the accessories.
-                      </ListItem>
-                      <ListItem href="/services" title="Services">
-                        Explore our range of services.
-                      </ListItem>
+                      <Link href="/store">
+                        <ListItem title="Shop">
+                          View the store.
+                        </ListItem>
+                      </Link>
+                      <Link href="/">
+                        <ListItem title="Accessories">
+                          View the accessories.
+                        </ListItem>
+                      </Link>
+                      <Link href="/">
+                        <ListItem title="Services">
+                          Explore our range of services.
+                        </ListItem>
+                      </Link>
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -111,7 +117,7 @@ export default function NavBar() {
         </div>
         <div className="flex items-center space-x-4">
           <Button asChild className="hidden md:flex items-center justify-center">
-            <Link href="/">Contact Us</Link>
+            <Link href="#">Contact Us</Link>
           </Button>
           <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             <Menu className="h-6 w-6"/>
@@ -122,7 +128,7 @@ export default function NavBar() {
       <div className="fixed bottom-4 right-4">
         <ThemeToggle/>
       </div>
-    </header>
+    </nav>
   )
 }
 
