@@ -19,7 +19,6 @@ const HomePage = () => {
         <Button className="w-full md:w-1/2 sm:w-1/8">Get Started</Button>
       </div>
     </div>
-
   );
 };
 

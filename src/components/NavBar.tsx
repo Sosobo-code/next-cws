@@ -31,15 +31,12 @@ export default function NavBar() {
   if (!mounted) {
     return null;
   }
-
   return (
     <header className="sticky top-0 border-b bg-background z-50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
-
             <Image src="/assets/logo.svg" alt="Logo" width={150} height={40} />
-
           </Link>
           <div className="hidden md:flex">
             <NavigationMenu>
@@ -114,7 +111,6 @@ export default function NavBar() {
     </header>
   )
 }
-
 export const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
