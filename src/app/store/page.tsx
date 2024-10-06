@@ -1,7 +1,8 @@
 import React from 'react';
 import {Car, Palette, Wrench} from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
+import {Button, buttonVariants} from "@/components/ui/button";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -25,10 +26,9 @@ const Page = () => {
                 finishes.</p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">View Colors</Button>
+              <Link href="/store/wraps" className={buttonVariants({ className: "w-full" })}>View Colours</Link>
             </CardFooter>
           </Card>
-
           <Card className="hover:shadow-lg transition-shadow duration-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
