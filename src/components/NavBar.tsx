@@ -17,6 +17,7 @@ import {useTheme} from "next-themes";
 import {ThemeToggle} from "@/components/ui/ThemeToggle";
 import NavBarMobile from "@/components/NavBarMobile";
 import {cn} from "@/lib/utils";
+import Image from 'next/image';
 
 export default function NavBar() {
   const {theme} = useTheme();
@@ -30,27 +31,12 @@ export default function NavBar() {
   if (!mounted) {
     return null;
   }
-
   return (
     <nav className="sticky top-0 border-b bg-background z-50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 16v-4"/>
-              <path d="M12 8h.01"/>
-            </svg>
-            <span className="font-bold">Logo</span>
+            <Image src="/assets/logo.svg" alt="Logo" width={150} height={40} />
           </Link>
           <div className="hidden md:flex">
             <NavigationMenu>
@@ -131,7 +117,6 @@ export default function NavBar() {
     </nav>
   )
 }
-
 export const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
