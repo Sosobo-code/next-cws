@@ -32,7 +32,7 @@ export default function NavBar() {
   }
 
   return (
-    <header className="sticky top-0 border-b bg-background z-50">
+    <nav className="sticky top-0 border-b bg-background z-50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Link href="/" className="flex items-center space-x-2">
@@ -56,12 +56,10 @@ export default function NavBar() {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <Link href="/" passHref>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       <Home className="mr-2 h-4 w-4"/>
                       Home
-                    </NavigationMenuLink>
-                  </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>
@@ -74,7 +72,7 @@ export default function NavBar() {
                         <NavigationMenuLink asChild>
                           <Link
                             className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md ${theme === 'dark' ? 'animate-gradient' : 'light-mode-animate-gradient'}`}
-                            href="/"
+                            href="/store/wraps"
                           >
                             <div className="mb-2 mt-4 text-lg font-medium">
                               Wrap Colours
@@ -128,7 +126,7 @@ export default function NavBar() {
       <div className="fixed bottom-4 right-4">
         <ThemeToggle/>
       </div>
-    </header>
+    </nav>
   )
 }
 
