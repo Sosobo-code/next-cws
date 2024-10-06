@@ -56,10 +56,12 @@ export default function NavBar() {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <Link href="/">
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                       <Home className="mr-2 h-4 w-4"/>
                       Home
-                  </NavigationMenuLink>
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>
@@ -115,7 +117,7 @@ export default function NavBar() {
         </div>
         <div className="flex items-center space-x-4">
           <Button asChild className="hidden md:flex items-center justify-center">
-            <Link href="/">Contact Us</Link>
+            <Link href="#">Contact Us</Link>
           </Button>
           <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             <Menu className="h-6 w-6"/>
