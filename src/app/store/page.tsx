@@ -38,14 +38,13 @@ const Page = () => {
               <CardDescription>Enhance your wrap with our accessories</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Complement your wrap with our selection of accessories. From trim kits to decals, we've got you
+              <p>Complement your wrap with our selection of accessories. From trim kits to decals, we&apos;ve got you
                 covered.</p>
             </CardContent>
             <CardFooter>
               <Button className="w-full">Browse Accessories</Button>
             </CardFooter>
           </Card>
-
           <Card className="hover:shadow-lg transition-shadow duration-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
