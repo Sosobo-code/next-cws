@@ -81,7 +81,7 @@ const ColorPickerPage = () => {
                 fill
                 className="object-contain"
               />
-              // TODO: redo this later with a proper overlay, once we have the actual images
+              {/*// TODO: redo this later with a proper overlay, once we have the actual images*/}
               <div
                 className="absolute inset-0 opacity-50"
                 style={{ backgroundColor: selectedColor.name.toLowerCase().replace(" ", "") }}
