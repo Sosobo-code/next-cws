@@ -11,7 +11,7 @@ const wrapColors = [
   {name: "Deep Green", price: 60, image: "/placeholder.svg?height=200&width=300"},
 ]
 
-const Page = () => {
+const WrapsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <main className="container mx-auto px-4 py-8">
@@ -43,4 +43,4 @@ const Page = () => {
   )
 };
 
-export default Page;
+export default WrapsPage;
