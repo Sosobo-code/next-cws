@@ -7,12 +7,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
 const wrapColors = [
-  { name: "Deep Blue", image: "/placeholder.svg?height=100&width=100&text=Deep+Blue" },
-  { name: "Sky Blue", image: "/placeholder.svg?height=100&width=100&text=Sky+Blue" },
-  { name: "Royal Purple", image: "/placeholder.svg?height=100&width=100&text=Royal+Purple" },
-  { name: "Sunset Orange", image: "/placeholder.svg?height=100&width=100&text=Sunset+Orange" },
-  { name: "Fiery Red", image: "/placeholder.svg?height=100&width=100&text=Fiery+Red" },
-  { name: "Electric Blue", image: "/placeholder.svg?height=100&width=100&text=Electric+Blue" },
+  { name: "Deep Blue", image: "/assets/deep-blue.webp" },
+  { name: "Sky Blue", image: "/assets/sky-blue.webp" },
+  { name: "Royal Purple", image: "/assets/royal-purple.webp" },
+  { name: "Sunset Orange", image: "/assets/sunset-orange.webp" },
+  { name: "Fiery Red", image: "/assets/fiery-red.webp" },
+  { name: "Electric Blue", image: "/assets/electric-blue.jpg" },
 ]
 
 const carModels = [
