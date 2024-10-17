@@ -16,9 +16,9 @@ const wrapColors = [
 ]
 
 const carModels = [
-  { name: "Sports Car", image: "/placeholder.svg?height=300&width=500&text=Sports+Car" },
-  { name: "SUV", image: "/placeholder.svg?height=300&width=500&text=SUV" },
-  { name: "Sedan", image: "/placeholder.svg?height=300&width=500&text=Sedan" },
+  { name: "view1", image: "/assets/carcolors/default/bmw.png" },
+  { name: "view2", image: "/assets/carcolors/default/frontview.png" },
+  { name: "view3", image: "/assets/carcolors/default/sideview.png" },
 ]
 
 const ColorPickerPage = () => {
@@ -36,7 +36,7 @@ const ColorPickerPage = () => {
   return (
     <div className="h-[80vh] flex flex-col">
       <div className="container mx-auto px-4 py-8 flex-grow flex flex-col overflow-hidden">
-        <h1 className="text-4xl font-bold mb-8 text-center">Car Wrap Color Picker</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Colour Picker</h1>
         <div className="flex-grow flex flex-col lg:flex-row gap-8 overflow-hidden">
           <div className="lg:w-1/2 flex flex-col overflow-hidden">
             <div className="flex-grow grid grid-cols-2 md:grid-cols-3 gap-4 overflow-y-auto p-1">

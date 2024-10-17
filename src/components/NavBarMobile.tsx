@@ -62,14 +62,11 @@ export default function NavBarMobile({isMobileMenuOpen}: MobileMenuProps) {
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/store" title="Shop">
+                <ListItem href="/store/wraps" title="Shop">
                   View the store.
                 </ListItem>
-                <ListItem href="/" title="Accessories">
-                  View the accessories.
-                </ListItem>
-                <ListItem href="/services" title="Services">
-                  Explore our range of services.
+                <ListItem href="/services" title="About Us">
+                  Explore what we do, and why we do it.
                 </ListItem>
               </ul>
             </NavigationMenuContent>

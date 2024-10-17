@@ -71,19 +71,16 @@ export default function NavBar() {
                           </Link>
                         </NavigationMenuLink>
                       </li>
-                      <Link href="/store">
+                      <Link href="/store/wraps">
                         <ListItem title="Shop">
                           View the store.
                         </ListItem>
                       </Link>
                       <Link href="/">
-                        <ListItem title="Accessories">
-                          View the accessories.
-                        </ListItem>
                       </Link>
                       <Link href="/">
-                        <ListItem title="Services">
-                          Explore our range of services.
+                        <ListItem title="About Us">
+                          Explore what we do, and why we do it.
                         </ListItem>
                       </Link>
                     </ul>
