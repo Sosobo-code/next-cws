@@ -60,7 +60,7 @@ export default function NavBar() {
                         <NavigationMenuLink asChild>
                           <Link
                             className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md ${theme === 'dark' ? 'animate-gradient' : 'light-mode-animate-gradient'}`}
-                            href="/store/wraps"
+                            href="/wraps"
                           >
                             <div className="mb-2 mt-4 text-lg font-medium">
                               Wrap Colours
@@ -71,19 +71,14 @@ export default function NavBar() {
                           </Link>
                         </NavigationMenuLink>
                       </li>
-                      <Link href="/store">
+                      <Link href="/wraps">
                         <ListItem title="Shop">
                           View the store.
                         </ListItem>
                       </Link>
-                      <Link href="/">
-                        <ListItem title="Accessories">
-                          View the accessories.
-                        </ListItem>
-                      </Link>
-                      <Link href="/">
-                        <ListItem title="Services">
-                          Explore our range of services.
+                      <Link href="/about">
+                        <ListItem title="About Us">
+                          Explore what we do, and why we do it.
                         </ListItem>
                       </Link>
                     </ul>
