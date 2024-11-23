@@ -63,6 +63,8 @@ const wrapColors = [
   },
 ]
 
+type ImageKeys = 'wrap' | 'view1' | 'view2' | 'view3';
+
 const carModels = [
   {name: "view1", image: "/assets/carcolors/default/bmw.png"},
   {name: "view2", image: "/assets/carcolors/default/frontview.png"},
@@ -124,7 +126,7 @@ const ColorPickerPage = () => {
           <div className="lg:w-1/2 flex flex-col overflow-hidden">
             <div className="flex-grow relative">
               <Image
-                src={selectedColor.images[carModels[currentCarIndex].name]}
+                src={selectedColor.images[carModels[currentCarIndex].name as ImageKeys]}
                 alt={carModels[currentCarIndex].name}
                 fill
                 className="object-contain"
