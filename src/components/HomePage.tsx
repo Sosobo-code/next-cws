@@ -15,7 +15,7 @@ const HomePage = () => {
       </video>
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"/>
       <div className="relative flex flex-col justify-center items-center h-screen z-10 px-4 text-center">
-        <h1 className="font-semibold text-4xl md:text-5xl mb-4 md:mb-8 text-white">Lorem Ipsum Dolor Sit Amet</h1>
+        <h1 className="font-semibold text-4xl md:text-5xl mb-4 md:mb-8 text-white">Make Your Car Yours</h1>
         <Button className="w-full md:w-1/2 sm:w-1/8">Get Started</Button>
       </div>
     </div>

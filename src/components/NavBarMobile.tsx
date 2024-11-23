@@ -51,7 +51,7 @@ export default function NavBarMobile({isMobileMenuOpen}: MobileMenuProps) {
                   <NavigationMenuLink asChild>
                     <Link
                       className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md ${theme === 'dark' ? 'animate-gradient' : 'light-mode-animate-gradient'}`}
-                      href="/store/wraps"
+                      href="/wraps"
                     >
                       <div className="mb-2 mt-4 text-lg font-medium">
                         Wrap Colours
@@ -62,14 +62,11 @@ export default function NavBarMobile({isMobileMenuOpen}: MobileMenuProps) {
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/store" title="Shop">
+                <ListItem href="/wraps" title="Shop">
                   View the store.
                 </ListItem>
-                <ListItem href="/" title="Accessories">
-                  View the accessories.
-                </ListItem>
-                <ListItem href="/services" title="Services">
-                  Explore our range of services.
+                <ListItem href="/about" title="About Us">
+                  Explore what we do, and why we do it.
                 </ListItem>
               </ul>
             </NavigationMenuContent>
