@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 import Image from "next/image"
-import { cn } from "@/lib/utils"
+import {cn} from "@/lib/utils"
 
 const wrapColors = [
   {name: "Deep Blue", price: 50, image: "/assets/deep-blue.webp", ringColor: "ring-blue-900"},
