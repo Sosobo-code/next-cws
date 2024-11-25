@@ -19,7 +19,7 @@ const wrapColors = [
   {
     name: "Sky Blue",
     images: {
-			wrap: "/assets/sky-blue.webp",
+      wrap: "/assets/sky-blue.webp",
       view1: "/assets/carcolors/skyblue/bmw_sky_blue.png",
       view2: "/assets/carcolors/skyblue/front_view_sky_blue.png",
       view3: "/assets/carcolors/skyblue/side_view_sky_blue.png"
@@ -28,7 +28,7 @@ const wrapColors = [
   {
     name: "Royal Purple",
     images: {
-			wrap: "/assets/royal-purple.webp",
+      wrap: "/assets/royal-purple.webp",
       view1: "/assets/carcolors/royalpurple/bmw_royal_purple.png",
       view2: "/assets/carcolors/royalpurple/front_view_royal_purple.png",
       view3: "/assets/carcolors/royalpurple/side_view_royal_purple.png"
@@ -37,7 +37,7 @@ const wrapColors = [
   {
     name: "Sunset Orange",
     images: {
-			wrap: "/assets/sunset-orange.webp",
+      wrap: "/assets/sunset-orange.webp",
       view1: "/assets/carcolors/sunsetorange/bmw_sunset_orange.png",
       view2: "/assets/carcolors/sunsetorange/front_view_sunset_orange.png",
       view3: "/assets/carcolors/sunsetorange/side_view_sunset_orange.png"
@@ -46,7 +46,7 @@ const wrapColors = [
   {
     name: "Fiery Red",
     images: {
-			wrap: "/assets/fiery-red.webp",
+      wrap: "/assets/fiery-red.webp",
       view1: "/assets/carcolors/fieryred/bmw_fiery_red.png",
       view2: "/assets/carcolors/fieryred/front_view_fiery_red.png",
       view3: "/assets/carcolors/fieryred/side_view_fiery_red.png"
@@ -55,7 +55,7 @@ const wrapColors = [
   {
     name: "Electric Blue",
     images: {
-			wrap: "/assets/electric-blue.jpg",
+      wrap: "/assets/electric-blue.jpg",
       view1: "/assets/carcolors/electricblue/bmw_electric_blue.png",
       view2: "/assets/carcolors/electricblue/front_view_electric_blue.png",
       view3: "/assets/carcolors/electricblue/side_view_electric_blue.png"
@@ -84,12 +84,12 @@ const ColorPickerPage = () => {
   }
 
   return (
-    <div className="h-[80vh] flex flex-col">
-      <div className="container mx-auto px-4 py-8 flex-grow flex flex-col overflow-hidden">
-        <h1 className="text-4xl font-bold mb-8 text-center">Colour Picker</h1>
-        <div className="flex-grow flex flex-col lg:flex-row gap-8 overflow-hidden">
-          <div className="lg:w-1/2 flex flex-col overflow-hidden">
-            <div className="flex-grow grid grid-cols-2 md:grid-cols-3 gap-4 overflow-y-auto p-1">
+    <div className="flex flex-col min-h-screen">
+      <div className="container mx-auto px-4 py-6 flex-grow flex flex-col">
+        <h1 className="text-3xl font-bold mb-6 text-center">Colour Picker</h1>
+        <div className="flex-grow flex flex-col lg:flex-row gap-6">
+          <div className="lg:w-1/2 flex flex-col order-2 lg:order-1">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 overflow-y-auto p-1">
               {wrapColors.map((color) => (
                 <Card
                   key={color.name}
@@ -100,7 +100,7 @@ const ColorPickerPage = () => {
                   }`}
                   onClick={() => setSelectedColor(color)}
                 >
-                  <CardContent className="p-2 md:p-4">
+                  <CardContent className="p-2">
                     <div className="relative aspect-square rounded-md overflow-hidden">
                       <Image
                         src={color.images.wrap}
@@ -109,38 +109,52 @@ const ColorPickerPage = () => {
                         className="object-cover"
                       />
                     </div>
-                    <p className="text-center mt-2 text-sm md:text-base">{color.name}</p>
+                    <p className="text-center mt-2 text-sm">{color.name}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
-            <div className="flex justify-center gap-4 mt-4">
-              <Button variant="outline" size="icon" onClick={prevCar}>
-                <ChevronLeft className="h-4 w-4"/>
-              </Button>
-              <Button variant="outline" size="icon" onClick={nextCar}>
-                <ChevronRight className="h-4 w-4"/>
-              </Button>
-            </div>
           </div>
-          <div className="lg:w-1/2 flex flex-col overflow-hidden">
-            <div className="flex-grow relative">
+          <div className="lg:w-1/2 flex flex-col order-1 lg:order-2">
+            <div className="relative aspect-video w-full max-w-2xl mx-auto mb-4">
               <Image
                 src={selectedColor.images[carModels[currentCarIndex].name as ImageKeys]}
                 alt={carModels[currentCarIndex].name}
                 fill
                 className="object-contain"
               />
-              <Button variant="outline" size="icon" className="absolute left-4 top-1/2 transform -translate-y-1/2"
-                      onClick={prevCar}>
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-background/80 hidden lg:flex"
+                onClick={prevCar}
+              >
                 <ChevronLeft className="h-4 w-4"/>
+                <span className="sr-only">Previous view</span>
               </Button>
-              <Button variant="outline" size="icon" className="absolute right-4 top-1/2 transform -translate-y-1/2"
-                      onClick={nextCar}>
+              <Button
+                variant="outline"
+                size="icon"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-background/80 hidden lg:flex"
+                onClick={nextCar}
+              >
                 <ChevronRight className="h-4 w-4"/>
+                <span className="sr-only">Next view</span>
               </Button>
             </div>
-            <p className="text-center mt-4">Selected: {selectedColor.name} on {carModels[currentCarIndex].name}</p>
+            <p className="text-center mb-4">
+              {selectedColor.name}
+            </p>
+            <div className="flex justify-center gap-4 mt-4 lg:hidden">
+              <Button variant="outline" size="icon" onClick={prevCar}>
+                <ChevronLeft className="h-4 w-4"/>
+                <span className="sr-only">Previous view</span>
+              </Button>
+              <Button variant="outline" size="icon" onClick={nextCar}>
+                <ChevronRight className="h-4 w-4"/>
+                <span className="sr-only">Next view</span>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
